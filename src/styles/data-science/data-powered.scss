@@ -1,0 +1,76 @@
+.page-content--data {
+  background-color: white;
+}
+
+.data-powered {
+  background-color: white;
+  min-height: 500px;
+  background-color: #df271c;
+  background-image: url('./images/icons/sapce.svg');
+  background-size: 1000px 700px;
+  background-repeat: no-repeat;
+  background-position: bottom -100px right -150px;
+  background-color: #df271c;
+  color: white;
+  margin-left: 50px;
+  margin-right: 50px;
+
+  @include tablets {
+    margin-left: 50px;
+    margin-right: 50px;
+
+  }
+
+
+  @include phones {
+    min-height: 550px;
+    background-position: bottom -60px left -150px;
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+    background-repeat: no-repeat;
+    padding: 0;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding: 60px 0 0 50px;
+
+    @include tablets {
+      padding: 20px 0 0 20px;
+    }
+
+    @include phones {
+      padding: 40px 0 0 0;
+    }
+  }
+
+
+  &__info {
+    width: 50%;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 30px;
+
+    @include phones {
+      width: 85%;
+      margin-bottom: 25rem;
+      font-size: 1.5rem;
+    }
+  }
+
+
+  &__subtitle {
+    width: 50%;
+    margin-bottom: 43px;
+    line-height: 45px;
+
+    @include phones {
+      width: 100%;
+      margin-bottom: 25px;
+    }
+  }
+
+}

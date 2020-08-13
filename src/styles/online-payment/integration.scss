@@ -1,0 +1,97 @@
+.integration {
+
+  @media screen and (max-width: 890px) {
+    padding-top: 5.125rem;
+    padding-bottom: 2.125rem;
+  }
+
+  @include phones {
+    padding-top: 3.125rem;
+    padding-bottom: 0;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 890px) {
+      flex-direction: column;
+      align-items: center;
+      max-width: 90%;
+    }
+  }
+
+  &__img {
+    width: 424px;
+    height: 548px;
+    flex: 1;
+    position: relative;
+
+    @media screen and (max-width: 890px) {
+      min-width: 400px;
+      min-height: 600px;
+    }
+  }
+
+  &__pic {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 2%;
+    left: 5%;
+
+    @media screen and (max-width: 890px) {
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__info {
+    flex: 1;
+    margin-right: 110px;
+
+    @media screen and (max-width: 890px) {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+
+  &__subtitle {
+    margin-bottom: 43px;
+  }
+
+  &__desc {
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 48px;
+  }
+
+  &__link {
+    margin-right: 50px;
+    display: inline;
+    font-size: 24px;
+    font-weight: 300;
+    color: $colorRed;
+    border-bottom: 1px dotted $colorRed;
+    outline: none;
+    cursor: pointer;
+    white-space: nowrap;
+    position: relative;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:after {
+      content: "\2192";
+      display: block;
+      font-size: 18px;
+      color: $colorRed;
+      position: absolute;
+      top: 0;
+      right: -25px;
+    }
+
+  }
+}

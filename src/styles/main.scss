@@ -1,0 +1,31 @@
+@import './base/font';
+
+@import './base/mixins', './base/variables', './base/layout';
+
+@import './blocks/hero', './blocks/header', './blocks/menu.scss', './blocks/hover-menu.scss';
+@import './blocks/about', './blocks/footer.scss';
+
+@import './global-card/payments.scss', './global-card/reasons.scss', './global-card/advantages.scss';
+@import './global-card/cards.scss', './global-card/contact.scss';
+
+@import './online-payment/checkout.scss', './online-payment/methods.scss', './online-payment/integration.scss';
+@import './online-payment/features.scss';
+
+@import './point/point.scss', './point/point-features.scss', './point/point-works.scss', './point/point-transaction.scss', './point/point-contact.scss';
+@import './omni/omnichannel.scss', './omni/reporting.scss';
+
+
+@import './fraud/fraud-problems.scss', './fraud/fraud-ai.scss', './fraud/fraud-how.scss', './fraud/fraud-features.scss';
+@import './reporting/interface.scss', './reporting/paydata.scss', './reporting/strategy.scss';
+
+
+@import './data-science/data-science.scss', './data-science/data-feature.scss', './data-science/data-powered.scss', './data-science/data-getting.scss';
+@import './data-science/data-contact.scss';
+
+@import './checkout/tokenization.scss', './checkout/customization.scss', './checkout/checkout-features.scss';
+@import './paymethods/payment-methods.scss';
+
+@import './payment-link/payment-link.scss', './payment-link/link-works.scss', './payment-link/link-checkout.scss';
+@import './payment-link/link-contact.scss', './payment-link/link-easy.scss';
+
+@import './contact-us/contact-details.scss';

@@ -1,0 +1,95 @@
+.reporting {
+  background-color: $colorSkyBlue;
+  background-image: url("./pictures/omnichannel2.png");
+  background-size: 55%;
+  background-position: 110% 60%;
+  background-repeat: no-repeat;
+  padding-top: 70px;
+  padding-bottom: 70px;
+
+  @media screen and (max-width: 940px) {
+    background-image: none;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 940px) {
+      max-width: 90%;
+      flex-direction: column;
+    }
+  }
+
+  &__img {
+    width: 630px;
+    height: 420px;
+    display: none;
+
+    @media screen and (max-width: 940px) {
+      display: block;
+    }
+
+    @include phones {
+      width: 26.375rem;
+      height: 18.25rem;
+    }
+  }
+
+  &__info {
+    flex: 1;
+    margin-right: 90px;
+    max-width: 350px;
+
+    @media screen and (max-width: 940px) {
+      margin-right: 0;
+      margin-bottom: 40px;
+      max-width: 100%;
+    }
+  }
+
+  &__pic {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__subtitle {
+    margin-bottom: 36px;
+    line-height: 45px;
+  }
+
+  &__desc {
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 27px;
+  }
+
+  &__link {
+    margin-right: 50px;
+    display: inline;
+    font-size: 24px;
+    font-weight: 300;
+    color: $colorRed;
+    border-bottom: 1px dotted $colorRed;
+    outline: none;
+    cursor: pointer;
+    white-space: nowrap;
+    position: relative;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:after {
+      content: "\2192";
+      display: block;
+      font-size: 18px;
+      color: $colorRed;
+      position: absolute;
+      top: 0;
+      right: -25px;
+    }
+
+  }
+
+}

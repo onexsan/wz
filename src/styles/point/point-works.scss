@@ -1,0 +1,130 @@
+.point-works {
+
+  padding: 100px 0px 100px 0px;
+  background-color: white;
+
+  @include tablets {
+    padding: 50px 50px 50px 50px;
+
+  }
+
+  @include phones {
+    padding: 50px 0px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+
+    .subtitle {
+      @include phones {
+        align-self: flex-start;
+      }
+    }
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+
+    @include phones {
+      flex-direction: column;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 45%;
+      left: 30px;
+      height: 1px;
+      width: 100%;
+      background-color: #d1d1d1;
+
+      @include tablets {
+        top: 115px;
+      }
+
+      @include phones {
+        width: 1px;
+        height: 250px;
+        top: 70px;
+        left: -5px;
+      }
+    }
+  }
+
+  &__item {
+    margin-right: 100px;
+    flex: 1;
+    position: relative;
+
+    @include phones {
+      margin-right: 0;
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &-subtitle {
+      font-size: 40px;
+      font-weight: 500;
+      color: #df271c;
+      margin-top: 33px;
+      margin-bottom: 100px;
+      line-height: 46px;
+      position: relative;
+
+      @include phones {
+        font-size: 32px;
+        margin-right: 30px;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+      &:before {
+        content: "";
+        width: 44px;
+        height: 44px;
+        display: block;
+        background-image: url('./images/icons/bullet.svg');
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 70px;
+        left: 0;
+
+        @include phones {
+          width: 35px;
+          height: 35px;
+          top: 43px;
+          left: -15px;
+        }
+      }
+    }
+  }
+
+  &__info {
+    font-size: 24px;
+    font-weight: 300;
+    color: #101820;
+    margin-top: 35px;
+  }
+}

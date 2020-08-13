@@ -1,0 +1,176 @@
+.wrapper--data {
+  background-color: #fdc97e;
+  color: #0e0e0e;
+}
+
+.header--data {
+  @include phones {
+    margin-bottom: 30px;
+  }
+}
+
+.data-hero {
+
+  @include phones {
+
+    &__container {
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+  }
+
+  &__img {
+    background-image: url('./images/icons/data-science-illu.svg');
+    background-repeat: no-repeat;
+    background-position: center right;
+    width: 600px;
+    height: 412px;
+
+    @include phones {
+      width: 22.75rem;
+      height: 15.125rem;
+      background-position: center;
+    }
+
+  }
+
+  &__pic {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__content {
+    width: 45%;
+
+    @include tablets {
+      width: 80%;
+
+    }
+
+    @include phones {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.data-about {
+  padding: 140px 0px 50px 0px;
+  background-color: white;
+
+  @include tablets {
+    padding: 50px 50px 50px 50px;
+  }
+
+  @include phones {
+    padding: 50px 0px 50px 0px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: flex-end;
+
+    @include phones {
+      flex-direction: column;
+    }
+
+  }
+
+  &__img {
+    background-image: url('./images/icons/tiger.svg');
+    width: 650px;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: left -30px bottom;
+
+    @include phones {
+      width: 34.375rem;
+      height: 15.5rem;
+      background-position: top left;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__pic {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__row {
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include phones {
+      width: 100%;
+    }
+  }
+
+  &__desc {
+    @include phones {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 40px;
+  }
+
+  &__item {
+    margin: 0 0 20px 35px;
+    position: relative;
+
+    &:before {
+      content: "";
+      width: 20px;
+      height: 15px;
+      display: block;
+      background: url('./pictures/li.png') no-repeat;
+      position: absolute;
+      top: 5px;
+      left: -30px;
+
+      @include tablets {
+        width: 20px;
+        height: 20px;
+      }
+
+      @include phones {
+        width: 20px;
+        height: 20px;
+        top: 5px;
+        left: -30px;
+      }
+
+
+    }
+
+  }
+
+  &-subtitle {
+    font-size: 28px;
+    margin-top: 33px;
+    margin-bottom: 33px;
+    line-height: 30px;
+  }
+
+
+  &__info {
+    font-size: 20px;
+    font-weight: 300;
+    width: 50%;
+
+    @include phones {
+      width: 100%;
+    }
+  }
+}

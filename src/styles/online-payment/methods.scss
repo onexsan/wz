@@ -1,0 +1,104 @@
+.methods {
+  padding-top: 126px;
+  padding-bottom: 126px;
+  background-image: url("./pictures/payment-left.png"), url("./pictures/payment-right.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position-x: 2%, 98%;
+  background-position-y: 30%, 30%;
+  background-size: 41%, 41%;
+  margin: 50px 50px;
+  min-height: 700px;
+
+  @media screen and (max-width: 1020px) {
+    background-image: none;
+    margin: 50px 0px 0px 0px;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
+  @include phones {
+    padding-top: 0;
+    padding-bottom: 40px;
+    margin: 50px 0px 0px 0px;
+  }
+
+
+  &--omni {
+    margin-top: 90px;
+    margin-bottom: 50px;
+
+    @media screen and (max-width: 940px) {
+      margin-top: 0;
+      margin-bottom: 30px;
+      padding-bottom: 0;
+    }
+  }
+
+  &--check {
+    margin-top: 70px;
+    margin-bottom: 50px;
+
+    @media screen and (max-width: 940px) {
+      margin-top: 0;
+      margin-bottom: 30px;
+      padding-bottom: 0;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    max-width: 42rem;
+
+    @media screen and (max-width: 1020px) {
+      align-items: flex-start;
+      max-width: 100%;
+      justify-content: center;
+    }
+
+    @include tablets {
+      max-width: 90%;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 35px;
+    line-height: 44px;
+  }
+
+  &__desc {
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 31px;
+  }
+
+  &__link {
+    margin-right: 50px;
+    display: inline;
+    font-size: 24px;
+    font-weight: 300;
+    color: $colorRed;
+    border-bottom: 1px dotted $colorRed;
+    outline: none;
+    cursor: pointer;
+    white-space: nowrap;
+    position: relative;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:after {
+      content: "\2192";
+      display: block;
+      font-size: 18px;
+      color: $colorRed;
+      position: absolute;
+      top: 0;
+      right: -25px;
+    }
+
+  }
+}

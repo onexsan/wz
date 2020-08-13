@@ -1,0 +1,342 @@
+html {
+  font-size: 16px;
+
+  @include tablets {
+    font-size: 14px;
+  }
+
+  @include phones {
+    font-size: 13px;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Brutal Type', Arial, sans-serif;
+  line-height: 1.42;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+
+  @include phones {
+    font-size: 19px;
+  }
+}
+
+.wrapper {
+  width: 100%;
+  /*max-width: 940px + 20px; */
+  //height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $colorRed;
+  //background-image: url("./pictures/logotype-huge.png");
+  //background-position: top 3% right 3%;
+  //background-size: auto;
+  //background-repeat: no-repeat;
+  color: $colorWhite;
+  overflow: hidden;
+
+
+  @media screen and (max-width: 768px) {
+    background-image: none;
+  }
+
+  &--payment {
+    background-color: $colorPurple;
+    color: $colorBlack;
+  }
+
+  &--check {
+    background-color: $colorPowder;
+    color: $colorBlack;
+  }
+
+  &--omni {
+    background-color: $colorBeige;
+    color: $colorBlack;
+  }
+
+  &--fraud {
+    background-color: $colorFraudBlue;
+    color: $colorBlack;
+  }
+
+  &--fraud-white {
+    background-color: $colorWhite;
+    color: $colorBlack;
+  }
+
+  &--reporting {
+    background-color: $colorStrawberry;
+    color: $colorBlack;
+  }
+
+  &--paymethods {
+    background-color: $colorPaymentBlue;
+    color: $colorBlack;
+  }
+
+  &--contact-us {
+    background-color: $colorDarkBlue;
+    color: $colorWhite;
+    flex: 1;
+  }
+
+  &--global {
+    display: flex;
+    background-color: $colorYellow;
+    background-image: none;
+    color: $colorBlack;
+
+    &-white {
+      background-color: $colorWhite;
+      color: $colorBlack;
+    }
+  }
+
+}
+
+.maincontent {
+  //height: 100%;
+  max-width: 1210px;
+  width: 100%;
+  // border: 1px solid blue;
+  position: relative;
+
+
+  &--main {
+    background-image: url("./pictures/logotype-huge.png");
+    background-position: top 1% right 0;
+    background-size: auto;
+    background-repeat: no-repeat;
+
+    @media screen and (max-width: 768px) {
+      background-image: none;
+      width: 100%;
+    }
+
+    @include phones {
+      background-image: none;
+    }
+
+
+  }
+
+}
+
+.page-content {
+  width: 100%;
+  position: relative;
+
+  &--global {
+    background-color: $colorWhite;
+  }
+
+  &--contact-us {
+    background-color: $colorWhite;
+  }
+
+  &--payment {
+    background-color: $colorWhite;
+  }
+
+  &--omni {
+    background-color: $colorWhite;
+  }
+
+  &--fraud {
+    background-color: $colorWhite;
+  }
+
+  &--reporting {
+    background-color: $colorWhite;
+  }
+
+  &--check {
+    background-color: $colorWhite;
+  }
+
+  &--paymethods {
+    background-color: $colorWhite;
+  }
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+ul,
+picture,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  font-weight: normal;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+.section {
+  display: flex;
+  min-height: 650px;
+  position: relative;
+  //  border: 1px solid yellowgreen;
+
+  @include tablets {
+    min-height: initial;
+    margin: 0 auto;
+  }
+
+  @include phones {
+    max-width: 100%;
+  }
+
+
+
+}
+
+.container {
+  /*  max-width: 940px; */
+  width: 90%;
+  max-width: 1010px;
+  margin: 0 auto;
+  display: flex;
+  //height: 100%;
+
+  @include tablets {
+    height: initial;
+    width: initial;
+  }
+
+  @include phones {
+    max-width: 460px;
+    width: 90%;
+  }
+
+}
+
+
+.title {
+  font-size: 50px;
+  font-weight: 500;
+  color: inherit;
+  line-height: 50px;
+
+  @include phones {
+    font-size: 2.9rem;
+
+  }
+}
+
+.subtitle {
+  font-size: 40px;
+  font-weight: 500;
+
+  @include phones {
+    font-size: 2.9rem;
+    line-height: 45px;
+  }
+}
+
+
+
+.btn {
+  font-size: 18px;
+  color: $colorDark;
+  padding: 0.6375rem 1.25rem 0.8175rem 1.875rem;
+  border: 1px solid $colorWhite;
+  background-color: $colorWhite;
+  white-space: nowrap;
+  outline: none;
+  border-radius: 21px 0 0 21px;
+  cursor: pointer;
+
+  margin-right: 50px;
+
+  position: relative;
+
+  &:after {
+    content: "";
+    display: block;
+    border: 27px solid transparent;
+    border-left: 27px solid #fff;
+    position: absolute;
+    top: -2px;
+    left: 100%;
+  }
+
+  &--red {
+    border: 1px solid $colorRed;
+    background-color: $colorRed;
+    color: $colorWhite;
+
+    &:after {
+      content: "";
+      display: block;
+      border: 27px solid transparent;
+      border-left: 27px solid $colorRed;
+      position: absolute;
+      top: -2px;
+      left: 100%;
+    }
+  }
+
+  &--blue {
+    border: 1px solid $colorUltramarine;
+    background-color: $colorUltramarine;
+    color: $colorWhite;
+
+    &:after {
+      content: "";
+      display: block;
+      border: 27px solid transparent;
+      border-left: 27px solid $colorUltramarine;
+      position: absolute;
+      top: -2px;
+      left: 100%;
+    }
+  }
+}
+
+body {
+  padding-top: 80px;
+}

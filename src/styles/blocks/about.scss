@@ -1,0 +1,604 @@
+.container-base {
+  max-width: 1010px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.about {
+  color: $colorDark;
+  flex-direction: column;
+  max-width: 97%;
+
+  &__title {
+    width: 52%;
+    color: $colorWhite;
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 45px;
+    margin: 83px 0 77px;
+
+    @media screen and (max-width: 767px) {
+      width: 95%;
+    }
+
+    @include phones {
+      font-size: 2.9rem;
+      margin: 45px 0 25px;
+    }
+
+
+
+    &--bottom {
+      margin: 0px;
+      margin-bottom: 34px;
+      width: 100%;
+      min-width: 500px;
+
+
+      @include phones {
+        font-size: 2.9rem;
+        min-width: 100%;
+      }
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+
+    &--bottom {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      @include tablets {
+        padding: 15px 15px 0px 15px;
+        flex-direction: column-reverse;
+      }
+
+      @include phones {
+        padding: 15px 0px 0px 0px;
+      }
+
+      .contact__pic {
+        background-image: url('./images/icons/start-illu-1.svg');
+        background-repeat: no-repeat;
+        background-position: right -5% bottom -20px;
+        background-size: 100% 100%;
+
+      }
+
+      .contact__img {
+        width: 600px;
+        height: 450px;
+        display: flex;
+        align-items: flex-end;
+
+
+      }
+
+      .contact__desc {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        @include tablets {
+          width: 50%;
+          align-self: center;
+        }
+
+        @media screen and (max-width: 500px) {
+          width: 90%;
+        }
+
+        @include phones {
+          align-self: flex-start;
+        }
+
+
+      }
+    }
+  }
+
+  &__list {
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include tablets {
+      margin-bottom: 30px;
+    }
+
+  }
+
+  &__item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+
+    @include tablets {
+      width: 90%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+
+  }
+
+  &__item-1 {
+    background-image: url('./images/icons/anywhere-illu.svg');
+    background-color: #fbf4f1;
+    background-repeat: no-repeat;
+    background-position: right -5% bottom -20px;
+    background-size: 700px 450px;
+
+    & .about__desc {
+      @include tablets {
+        padding-bottom: 380px
+      }
+
+      @include phones {
+        padding-bottom: 0;
+      }
+    }
+
+    @include phones {
+      background-size: 320px 200px;
+    }
+
+  }
+
+  &__item-2 {
+    background-color: #fff0c6;
+    background-image: url('./images/icons/pos-illu.svg');
+    background-repeat: no-repeat;
+    background-position: right -5% bottom -10px;
+    background-size: 470px 550px;
+
+
+    & .about__desc {
+      @include tablets {
+        padding-bottom: 400px
+      }
+
+
+      @include phones {
+        padding-bottom: 0;
+        background-size: 13.5rem 16.25rem;
+      }
+    }
+
+
+    @include phones {
+      background-size: 200px 260px;
+    }
+  }
+
+  &__item-3 {
+    background-color: #d1f1fc;
+    background-image: url('./images/icons/methods-illu-artboard.svg');
+    background-repeat: no-repeat;
+    background-position: right -50px bottom 50px;
+    background-size: 730px 680px;
+
+    @include tablets {
+      background-position: right -40px bottom;
+    }
+
+    & .about__desc {
+      @include tablets {
+        padding-bottom: 450px;
+      }
+
+
+      @include phones {
+        padding-bottom: 0;
+      }
+    }
+
+
+
+    @include phones {
+      background-size: 330px 320px;
+      background-position: right bottom 7%;
+    }
+
+  }
+
+  &__item-4 {
+    //padding: 0rem 3.125rem;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 94px;
+
+    @include phones {
+      padding: 0rem 25px;
+      padding-bottom: 35px;
+    }
+  }
+
+  &__head {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    border-radius: .25em;
+
+    @media screen and (max-width: 750px) {
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .about__arrow {
+      margin: 10px 20px 10px 20px;
+      width: 51px;
+      height: 18px;
+
+      &--icon {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .envelope:before,
+  .envelope:after {
+    position: absolute;
+    bottom: .25em;
+    width: 50%;
+    height: 30%;
+    content: '';
+  }
+
+  .envelope:before {
+    left: 2.5em;
+    height: 100%;
+    border-radius: 0 0 0 .25em;
+    box-shadow: -.2em .2em .2em rgba(7, 8, 10, 0.04);
+    transform: skewX(25deg);
+
+    @media screen and (max-width: 750px) {
+      display: none;
+    }
+  }
+
+  .envelope:after {
+    right: 2.5em;
+    height: 100%;
+    border-radius: 0 0 .25em 0;
+    transform: skewX(-25deg);
+    box-shadow: .2em .2em .2em rgba(7, 8, 10, 0.04);
+
+    @media screen and (max-width: 750px) {
+      display: none;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include tablets {
+      padding: 0rem 3.125rem;
+    }
+
+    @include phones {
+      padding: 0;
+    }
+
+    .about__text {
+      max-width: 730px;
+      text-align: center;
+      padding: 44px 0px 40px 0px;
+      margin-bottom: 0px;
+      font-size: 24px;
+
+      @media screen and (max-width: 750px) {
+        text-align: left;
+      }
+
+      @include phones {
+        padding: 30px 0px 30px 0px;
+      }
+    }
+  }
+
+
+  &__desc {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    //padding-left: 100px;
+    align-items: flex-start;
+
+    @include tablets {
+      width: 100%;
+      padding: 0px 50px;
+
+    }
+
+    @include phones {
+      padding: 0px 25px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 46.01px;
+
+    @include phones {
+      font-size: 2.47rem;
+    }
+
+
+    &--feature {
+      font-size: 28px;
+      margin-top: 33px;
+      margin-bottom: 33px;
+      line-height: 30px;
+
+      @media screen and (max-width: 750px) {
+        font-size: 1.7rem;
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+
+      @include phones {
+        font-size: 2rem;
+        line-height: 2rem;
+      }
+
+
+    }
+
+    &--wide {
+      margin-top: 60px;
+      margin-bottom: 60px;
+
+      @media screen and (max-width: 750px) {
+        margin-top: 57px;
+        margin-bottom: 0;
+
+        &:last-child {
+          margin-top: 0px;
+        }
+      }
+
+      @include phones {
+        margin-top: 25px;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 34px;
+    margin-bottom: 35px;
+
+
+  }
+
+  &__info {
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 20px;
+
+    @include phones {
+      font-size: 1.3rem;
+    }
+  }
+
+  &__link {
+    font-size: 20px;
+    font-weight: 300;
+    color: $colorRed;
+    border-bottom: 1px dotted $colorRed;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    //self-align: flex-start;
+    position: relative;
+
+    &--feature {
+      align-self: flex-start;
+    }
+
+    &:after {
+      content: "\2192";
+      display: block;
+      font-size: 18px;
+      color: $colorRed;
+      position: absolute;
+      top: 0;
+      right: -25px;
+    }
+  }
+
+  &__link-arrow {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+  }
+
+  &__img {
+    @include tablets {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+
+  &__pic {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: bottom right;
+  }
+
+  &__img-3 &__pic {
+    object-position: top right;
+  }
+
+  &__img-1 {
+    .about__pic {
+      width: 685px;
+      height: 428px;
+      object-fit: cover;
+
+      @include phones {
+        height: 17.75rem;
+      }
+    }
+
+  }
+
+  &__img-2 {
+    .about__pic {
+      width: 456px;
+      height: 542px;
+
+      @include phones {
+        height: 18.875rem;
+      }
+    }
+
+  }
+
+  &__img-3 {
+    .about__pic {
+      width: 674px;
+      height: 547px;
+
+      @include phones {
+        height: 21.9375rem;
+      }
+    }
+
+  }
+
+  &__icon--1 {
+    width: 42px;
+    height: 53px;
+  }
+
+  &__icon--2 {
+    width: 31px;
+    height: 41px;
+  }
+
+  &__icon--3 {
+    width: 42px;
+    height: 42px;
+  }
+
+  &__features {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 750px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__feature {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    ;
+    margin-right: 35px;
+
+    &:last-child {
+      margin-right: 0px;
+    }
+
+    @media screen and (max-width: 750px) {
+      margin-right: 0;
+      padding-bottom: 35px;
+      margin-bottom: 35px;
+      border-bottom: 1px dotted #d2d2d2;
+
+      &:last-child {
+        padding-bottom: 0;
+        margin-bottom: 0;
+        border: none;
+      }
+    }
+  }
+
+}
+
+.about__subtitle-1 {
+  margin-top: 80px;
+
+  @include phones {
+    margin-top: 25px;
+  }
+
+}
+
+.about__link-1 {
+  font-size: 24px;
+  margin-bottom: 100px;
+
+  @include phones {
+    margin-bottom: 13.5rem;
+  }
+}
+
+.about__subtitle-2 {
+  margin-top: 80px;
+
+  @include phones {
+    margin-top: 25px;
+  }
+}
+
+.about__link-2 {
+  font-size: 24px;
+  margin-bottom: 120px;
+
+  @include phones {
+    margin-bottom: 260px;
+  }
+}
+
+.about__subtitle-3 {
+  margin-top: 80px;
+
+  @include phones {
+    margin-top: 25px;
+  }
+}
+
+.about__link-3 {
+  font-size: 24px;
+  margin-bottom: 130px;
+
+  @include phones {
+    margin-bottom: 300px;
+  }
+}
+
+.about__text {
+  padding: 0 15px 0 0;
+}
