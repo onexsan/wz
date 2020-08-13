@@ -11,7 +11,7 @@
 
 <body>
   <div class="wrapper">
-    <div class="maincontent">
+    <div class="pagecontent">
       <section class="section hero">
         <div class="container hero__container">
           <header class="header">
@@ -23,7 +23,7 @@
             <div class="header__right">
               <nav class="header__nav nav">
                 <ul class="nav__list">
-                  <li class="nav__item">
+                  <li class="nav__item nav__item--current">
                     <a href="#" class="nav__link">Новости</a>
                   </li>
                   <li class="nav__item">
@@ -46,13 +46,11 @@
               <div class="header__links">
                 <div class="header__pricelist">
                   <a href="#" class="header__pricelist-link">
-                    <img src="./pictures/download-icon.png" alt="" class="header__pricelist-icon">
                     <p>Скачать прайс-лист</p>
                   </a>
                 </div>
                 <div class="header__call">
-                  <a href="tel:+78632559711" class="header__call-link">
-                    <img src="./pictures/phone-icon.png" alt="" class="header__call-icon">
+                  <a href="tel:+78632559711" class="header__call-link header__call-link--phone">
                     <p>
                       (863) 255-97-11
                     </p>
@@ -71,12 +69,13 @@
             </h1>
             <p class="hero__desc">
               POS материалы, рекламная и сувенирная продукция
+              <br>
               Разработка, производство, поставка по РФ
             </p>
           </div>
           <div class="hero__nav">
             <ul class="hero__list">
-              <li class="hero__item">
+              <li class="hero__item hero__item--current">
                 <a href="#" class="hero__item-link">
                   <img src="./pictures/to-icon.png" alt="" class="hero__item-icon">
                   <p>Торговое оборудование</p>
@@ -116,6 +115,8 @@
           </div>
         </div>
       </section>
+    </div>
+    <div class="maincontent">
       <section class="section racks">
         <div class="container racks__container">
           <div class="racks__head section__head">
