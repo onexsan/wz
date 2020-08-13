@@ -16,6 +16,7 @@
     text-transform: uppercase;
     position: relative;
     font-size: 36.5px;
+    margin-bottom: 22px;
 
     &:before {
       content: "";
@@ -36,12 +37,14 @@
 }
 
 .item {
+  flex: 1;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 15px;
 
   &__examples {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   &__example {
@@ -49,6 +52,65 @@
     flex-direction: column;
     align-items: center;
     flex: 1;
+    max-width: 130px;
+    margin-right: 50px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &-icon {
+      margin-bottom: 25px;
+    }
+
+    &-desc {
+      font-size: 15.5px;
+      text-transform: uppercase;
+      color: $colorDustyBlue;
+      text-align: center;
+    }
+  }
+
+  &__content {
+    padding: 30px;
+    background-color: $colorLightGray;
+  }
+
+  &__subtitle {
+    margin-bottom: 16px;
+  }
+
+  &__desc {
+    font-size: 15.5px;
+    margin-bottom: 40px;
+    text-align: justify;
+  }
+}
+
+.carousel {
+  background-color: $colorLightBlue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+
+  &__slide {
+    min-width: 470px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__img {
+    width: 90%;
+    height: 90%;
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -56,23 +118,10 @@
   font-size: 34px;
   font-weight: bold;
   line-height: 1.1;
-  margin-bottom: 22px;
 }
 
-.btn {
-  color: white;
+.subtitle {
+  font-size: 15.5px;
   text-transform: uppercase;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 22px 44px;
-  background-color: $colorRed;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  box-shadow: 1px 1.7px 4.8px 0.3px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-
-  &:hover {
-    transform: translateY(3px);
-    transition: .5s ease-in-out;
-  }
+  color: $colorRed;
 }

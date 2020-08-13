@@ -1,0 +1,43 @@
+.btn {
+  color: white;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 22px 44px;
+  background-color: $colorRed;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: 1px 1.7px 4.8px 0.3px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(3px);
+    transition: .5s ease-in-out;
+  }
+}
+
+.circle-btn {
+  display: block;
+  border: 1px solid $colorRed;
+  border-radius: 50%;
+  min-height: 14px;
+  max-height: 14px;
+  height: 13px;
+  width: 10px;
+  background: #fff;
+  margin-right: 5px;
+  cursor: pointer;
+
+  &.active {
+    background: $colorRed;
+  }
+
+  &:hover {
+    background: $colorRed;
+    transition: .3s ease-in-out;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
