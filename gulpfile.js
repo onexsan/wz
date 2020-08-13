@@ -37,11 +37,11 @@ task('copy:html', () => {
     .pipe(reload({ stream: true }));
 })
 
-task('copy:fonts', () => {
-  return src(`${SRC_PATH}/fonts/*`)
-    .pipe(dest(`${DIST_PATH}/fonts`))
-    .pipe(reload({ stream: true }));
-})
+// task('copy:fonts', () => {
+//   return src(`${SRC_PATH}/fonts/*`)
+//     .pipe(dest(`${DIST_PATH}/fonts`))
+//     .pipe(reload({ stream: true }));
+// })
 
 const pics = [
   `src/pictures/*.jpg`,
@@ -56,8 +56,8 @@ task('copyPicture', () => {
 
 task('icons', () => {
   return src(`${SRC_PATH}/svg/*.svg`)
-  .pipe(dest(`${DIST_PATH}/images/icons`))
-  .pipe(reload({stream: true}));
+    .pipe(dest(`${DIST_PATH}/images/icons`))
+    .pipe(reload({ stream: true }));
 })
 
 /*
@@ -120,8 +120,8 @@ task('scripts', () => {
 
 task('icons', () => {
   return src(`${SRC_PATH}/svg/*.svg`)
-  .pipe(dest(`${DIST_PATH}/images/icons`))
-  .pipe(reload({stream: true}));
+    .pipe(dest(`${DIST_PATH}/images/icons`))
+    .pipe(reload({ stream: true }));
 })
 
 
@@ -139,7 +139,7 @@ task(
   'default',
   series(
     "clean",
-    parallel("copy:html", 'copy:fonts', 'copyPicture', "styles", "scripts", "icons"),
+    parallel("copy:html", 'copyPicture', "styles", "scripts", "icons"),
     parallel("watch", "server")
   )
 )
@@ -148,6 +148,6 @@ task(
   'build',
   series(
     "clean",
-    parallel("copy:html", 'copy:fonts', 'copyPicture', "styles", "scripts", "icons")
+    parallel("copy:html", 'copyPicture', "styles", "scripts", "icons")
   )
 )
