@@ -1,0 +1,30 @@
+.section {
+  &__head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+
+  &__examples {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__example {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+  }
+}

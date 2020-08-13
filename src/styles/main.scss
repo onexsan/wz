@@ -1,1 +1,5 @@
-@import './base/mixins', './base/variables', './base/layout';
+@import './base/mixins.scss', './base/variables.scss', './base/layout.scss', './base/base.scss';
+
+@import './hero/header.scss', './hero/hero.scss';
+
+@import './footer/footer.scss';
