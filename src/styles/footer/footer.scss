@@ -99,27 +99,7 @@
     margin-bottom: 10px;
   }
 
-  &__address,
-  &__phone,
-  &__email,
-  &__schedule {
-    position: relative;
 
-    &:after {
-      content: "";
-      position: absolute;
-      top: 5%;
-      right: -30%;
-      background-color: white;
-      border-radius: 50%;
-      height: 36px;
-      width: 36px;
-      background-image: url("./pictures/location-icon.png");
-      background-size: 50%;
-      background-position: center center;
-      background-repeat: no-repeat;
-    }
-  }
 }
 
 .schedule {
@@ -139,5 +119,123 @@
   &__list {
     display: flex;
     justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      .soc__link {
+        opacity: .5;
+        transition: .5s ease;
+      }
+    }
+
+    &--tw {
+      .soc__link {
+        width: 15px;
+        height: 12px;
+      }
+
+      .soc__pic {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    &--insta {
+      .soc__link {
+        width: 13px;
+        height: 13px;
+      }
+
+      .soc__pic {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    &--fb {
+      .soc__link {
+        width: 8px;
+        height: 16px;
+      }
+
+      .soc__pic {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    &--yt {
+      .soc__link {
+        width: 15px;
+        height: 11px;
+      }
+
+      .soc__pic {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    &--vk {
+      .soc__link {
+        width: 21px;
+        height: 12px;
+      }
+
+      .soc__pic {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.contacts {
+
+  &__address,
+  &__phone,
+  &__email,
+  &__schedule {
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 5%;
+      right: -30%;
+      background-color: white;
+      border-radius: 50%;
+      height: 36px;
+      width: 36px;
+      background-image: url("./images/icons/place.svg");
+      background-size: 50%;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__phone {
+    &:after {
+      background-image: url("./images/icons/phone.svg");
+      background-size: 75%;
+    }
+  }
+
+  &__email {
+    &:after {
+      background-image: url("./pictures/mail-icon.png");
+      background-size: 50%;
+    }
+  }
+
+  &__schedule {
+    &:after {
+      background-image: url("./pictures/time-icon.png");
+      background-size: 50%;
+    }
   }
 }
