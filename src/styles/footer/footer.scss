@@ -25,6 +25,10 @@
         bottom: 5px;
         left: 15%;
         z-index: 10;
+
+        @include phones {
+          left: 3%;
+        }
       }
     }
   }
@@ -33,6 +37,10 @@
     width: 100%;
     display: flex;
     justify-content: center;
+
+    @include phones {
+      flex-direction: column-reverse;
+    }
   }
 
   &__title {
@@ -54,6 +62,10 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+
+    @include phones {
+      min-height: 240px;
+    }
   }
 
   &__content {
@@ -67,10 +79,18 @@
     background-position-x: left;
     background-position-y: center;
 
+    @include phones {
+      background-position-x: center;
+    }
+
     &-wrapper {
       max-width: 600px;
       display: flex;
       justify-content: flex-end;
+
+      @include phones {
+        flex-direction: column-reverse;
+      }
     }
   }
 }
@@ -83,6 +103,13 @@
   padding-right: 30px;
   position: relative;
 
+  @include phones {
+    text-align: center;
+    margin-right: 0;
+    padding-right: 0;
+    font-size: 1.23rem;
+  }
+
   &:after {
     content: "";
     position: absolute;
@@ -94,6 +121,10 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
+
+    @include phones {
+      display: none;
+    }
   }
 
   &__name {
@@ -115,12 +146,23 @@
   flex-direction: column;
   justify-content: space-between;
 
+  @include phones {
+    flex-direction: row;
+    margin-bottom: 30px;
+    font-size: 1.3rem;
+  }
+
   &__content {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin-bottom: 65px;
+
+    @include phones {
+      margin-bottom: 0;
+      margin-right: 30px;
+    }
   }
 
   &__address,
@@ -149,6 +191,11 @@
   &__list {
     display: flex;
     justify-content: space-between;
+
+    @include phones {
+      height: 100%;
+      flex-direction: column;
+    }
   }
 
   &__item {
@@ -245,6 +292,10 @@
       background-size: 50%;
       background-position: center center;
       background-repeat: no-repeat;
+
+      @include phones {
+        display: none;
+      }
     }
   }
 
@@ -266,6 +317,8 @@
     &:after {
       background-image: url("./pictures/time-icon.png");
       background-size: 50%;
+
+
     }
   }
 }

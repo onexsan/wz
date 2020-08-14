@@ -18,6 +18,10 @@
     font-size: 36.5px;
     margin-bottom: 22px;
 
+    @include phones {
+      text-align: center;
+    }
+
     &:before {
       content: "";
       position: absolute;
@@ -26,6 +30,10 @@
       top: 0%;
       left: -13px;
       background-color: $colorRed;
+
+      @include phones {
+        display: none;
+      }
     }
   }
 
@@ -33,6 +41,10 @@
     color: $colorDustyBlue;
     font-size: 20px;
     margin-bottom: 40px;
+
+    @include phones {
+      text-align: center;
+    }
   }
 }
 
@@ -42,11 +54,19 @@
   justify-content: space-between;
   margin-bottom: 15px;
 
+  @include phones {
+    flex-direction: column;
+    justify-content: stretch;
+  }
+
   &__content {
     max-width: 50%;
     padding: 30px;
     background-color: $colorLightGray;
 
+    @include phones {
+      max-width: 100%;
+    }
   }
 
   &__examples {
@@ -78,11 +98,20 @@
         justify-content: flex-start;
         max-width: 45%;
 
+        @include phones {
+          flex-direction: column;
+        }
+
 
         &-icon {
           margin-bottom: 0px;
           margin-right: 15px;
           min-width: 95px;
+
+          @include phones {
+            margin-right: 0;
+            margin-bottom: 10px;
+          }
         }
 
         &-desc {
@@ -101,6 +130,12 @@
     max-width: 130px;
     margin-right: 20px;
 
+    @include phones {
+      min-width: 50%;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+
     &:last-child {
       margin-right: 0;
     }
@@ -108,6 +143,10 @@
     &-icon {
       margin-bottom: 25px;
       min-width: 95px;
+
+      @include phones {
+        max-width: 96px;
+      }
     }
 
     &-desc {
@@ -129,6 +168,10 @@
     position: relative;
     padding-right: 70px;
 
+    @include phones {
+      padding-right: 0;
+    }
+
     &:after {
       content: "";
       position: absolute;
@@ -140,6 +183,10 @@
       background-position: center center;
       width: 90px;
       height: 30px;
+
+      @include phones {
+        display: none;
+      }
     }
   }
 }
@@ -153,6 +200,10 @@
   align-items: center;
   flex: 1;
   max-width: 50%;
+
+  @include phones {
+    max-width: 100%;
+  }
 
   &__slide {
     display: flex;
@@ -178,10 +229,18 @@
   font-weight: bold;
   line-height: 1.1;
   text-transform: uppercase;
+
+  @include phones {
+    font-size: 1.46rem;
+  }
 }
 
 .subtitle {
   font-size: 15.5px;
   text-transform: uppercase;
   color: $colorRed;
+
+  @include phones {
+    font-size: 1.23rem;
+  }
 }

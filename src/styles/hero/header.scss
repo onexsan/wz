@@ -4,6 +4,12 @@
   justify-content: space-between;
   padding: 22px 0px;
 
+  @include phones {
+    flex-direction: column;
+    align-items: center;
+  }
+
+
   &__logo {
     margin-right: 30px;
     width: 149px;
@@ -20,10 +26,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+
+    @include phones {
+      display: none;
+    }
   }
 
   &__nav {
     margin-right: 80px;
+
   }
 
   &__links {

@@ -6,19 +6,57 @@
   background-position: center bottom, center center;
   color: $colorDustyBlue;
 
+  @include phones {
+    background-image: none;
+    background-color: $colorLightBlue;
+  }
+
   &__container {
     justify-content: space-between;
     max-width: $maxWidth;
+
+    @include phones {
+      justify-content: center;
+    }
   }
 
   &__content {
     display: flex;
     flex-direction: column;
     width: 50%;
+
+    @include phones {
+      width: 100%;
+      text-align: center;
+    }
   }
 
   &__desc {
     font-size: 22.5px;
+
+    &--first {
+      @include phones {
+        display: none;
+      }
+    }
+
+    &--second {
+      @include phones {
+        color: #a3a5af;
+        font-size: 1.3rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+
+      }
+    }
+
+  }
+
+  &__title {
+    @include phones {
+      font-size: 1.7rem;
+    }
   }
 
   &__nav {
@@ -27,6 +65,10 @@
     flex-direction: column;
     justify-content: center;
     color: white;
+
+    @include phones {
+      display: none;
+    }
   }
 
   &__list {

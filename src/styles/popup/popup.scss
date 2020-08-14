@@ -1,0 +1,77 @@
+.popup {
+  display: none;
+
+  @include phones {
+
+    display: flex;
+    background: linear-gradient(90deg, rgba(216, 222, 230, 0.5) 0%, rgba(216, 222, 230, 0.5) 100%), url('./pictures/bg1.png') no-repeat center;
+    object-fit: cover;
+    min-height: 100vh;
+    align-items: flex-start;
+
+
+
+    .menu__list {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+      padding-top: 70px;
+    }
+
+    .menu__item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 7px 0;
+      border-right: 5px solid transparent;
+      transition: .3s;
+      color: white;
+      background-color: #718094;
+      margin: 5px 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:hover {
+        color: #fa454b;
+        border-right: 5px solid #fa454b;
+      }
+
+    }
+
+    .menu__img {
+      width: 46px;
+      height: 44px;
+      margin: 15px 80px;
+    }
+
+    .menu__pic {
+      width: 50px;
+      height: 50px;
+      fill: transparent;
+      stroke: white;
+      transition: 0.3s;
+    }
+
+    .menu__title {
+      //margin: 15px 0;
+    }
+
+    .menu__link {
+      font-size: 15px;
+      font-weight: 300;
+      cursor: pointer;
+
+      &:hover {
+        color: inherit;
+      }
+    }
+
+
+
+  }
+}

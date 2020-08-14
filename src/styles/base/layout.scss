@@ -105,6 +105,10 @@ table {
   position: relative;
   width: 100%;
   padding-left: 50px;
+
+  @include phones {
+    padding-left: 0;
+  }
 }
 
 .container {
