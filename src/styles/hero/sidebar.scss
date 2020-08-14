@@ -1,12 +1,25 @@
 .sidebar-menu {
-  width: 11rem;
+  width: 20rem;
   position: fixed;
   z-index: 1;
-  top: 15px;
+  top: 5px;
   left: 10px;
   padding: 8px 0;
   display: flex;
   flex-direction: column;
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+
+    &--first {
+      margin-bottom: 30px;
+    }
+
+    &--second {
+      box-shadow: -1px 25px 36px -20px rgba(0, 0, 0, 0.25);
+    }
+  }
 
   &__item {
     width: 100%;
@@ -38,10 +51,50 @@
     font-weight: 300;
     position: absolute;
     top: 0;
-    left: 35%;
+    left: 20%;
   }
 
   &__icon {
     width: 55px;
+  }
+
+  &__row {
+    background-color: $colorRed;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid rgba($color: #000000, $alpha: 0.3);
+
+    &:first-child {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+    &:last-child {
+      border-bottom: none;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+
+    &--insides {
+      background-color: $colorLightBlue;
+      display: none;
+    }
+  }
+
+  &__desc {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+  }
+
+  &__img {
+    margin-right: 30px;
+  }
+
+  &__link {
+    font-size: 15.1px;
+    color: $colorDustyBlue;
   }
 }
