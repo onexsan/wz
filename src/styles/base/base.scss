@@ -109,6 +109,7 @@
 }
 
 .carousel {
+  padding: 10px;
   background-color: $colorLightBlue;
   display: flex;
   flex-direction: column;
@@ -117,7 +118,6 @@
   flex: 1;
 
   &__slide {
-    min-width: 470px;
     display: flex;
     justify-content: center;
     align-items: center;
