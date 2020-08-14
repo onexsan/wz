@@ -1,9 +1,39 @@
 .footer {
   width: 100%;
   color: white;
-  background-color: RGBA(47, 85, 132, .5);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  &__intro {
+    padding-top: 35px;
+
+    .title {
+      position: relative;
+      padding-bottom: 20px;
+      margin-bottom: 10px;
+
+      &:after {
+        content: "";
+        position: absolute;
+        width: 196px;
+        height: 10px;
+        background-image: url("./pictures/decor-contact.png");
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        bottom: 5px;
+        left: 15%;
+        z-index: 10;
+      }
+    }
+  }
+
+  &__main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 
   &__title {
     color: $colorDustyBlue;
