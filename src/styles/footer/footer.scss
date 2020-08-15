@@ -81,6 +81,10 @@
 
     @include phones {
       background-position-x: center;
+      padding-left: 60px;
+      padding-right: 40px;
+      padding-top: 20px;
+      padding-bottom: 20px;
     }
 
     &-wrapper {
@@ -107,7 +111,23 @@
     text-align: center;
     margin-right: 0;
     padding-right: 0;
-    font-size: 1.23rem;
+    font-size: 1.1rem;
+
+    &:before {
+      content: "";
+      background-color: white;
+      position: absolute;
+      height: 20px;
+      width: 20px;
+      padding: 15px;
+      border-radius: 50%;
+      background-image: url("./pictures/cart-icon.png");
+      background-position: center center;
+      background-size: 60%;
+      background-repeat: no-repeat;
+      left: 43%;
+      top: -13%;
+    }
   }
 
   &:after {
@@ -131,11 +151,21 @@
     font-weight: bold;
   }
 
+  &__desc {
+    @include phones {
+      font-size: 1.23rem;
+    }
+  }
+
   &__desc,
   &__id,
   &__address,
   &__phone {
     margin-bottom: 10px;
+
+    @include phones {
+      margin-bottom: 20px;
+    }
   }
 
 }
@@ -148,8 +178,8 @@
 
   @include phones {
     flex-direction: row;
-    margin-bottom: 30px;
-    font-size: 1.3rem;
+    margin-bottom: 6.875rem;
+    font-size: 1.1rem;
   }
 
   &__content {
@@ -171,10 +201,14 @@
     margin-bottom: 10px;
   }
 
+  &__schedule {
+    width: 55%;
+  }
 
 }
 
 .schedule {
+
   &__list {
     display: flex;
     flex-direction: column;
@@ -195,6 +229,7 @@
     @include phones {
       height: 100%;
       flex-direction: column;
+      align-items: center;
     }
   }
 
@@ -213,6 +248,11 @@
       .soc__link {
         width: 15px;
         height: 12px;
+
+        @include phones {
+          width: 17px;
+          height: 17px;
+        }
       }
 
       .soc__pic {
@@ -225,6 +265,11 @@
       .soc__link {
         width: 13px;
         height: 13px;
+
+        @include phones {
+          width: 17px;
+          height: 17px;
+        }
       }
 
       .soc__pic {
@@ -237,6 +282,11 @@
       .soc__link {
         width: 8px;
         height: 16px;
+
+        @include phones {
+          width: 17px;
+          height: 17px;
+        }
       }
 
       .soc__pic {
@@ -249,6 +299,11 @@
       .soc__link {
         width: 15px;
         height: 11px;
+
+        @include phones {
+          width: 23px;
+          height: 16px;
+        }
       }
 
       .soc__pic {
@@ -261,6 +316,11 @@
       .soc__link {
         width: 21px;
         height: 12px;
+
+        @include phones {
+          width: 25px;
+          height: 17px;
+        }
       }
 
       .soc__pic {
@@ -279,6 +339,14 @@
   &__schedule {
     position: relative;
 
+    @include phones {
+      margin-bottom: 1.9375rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
     &:after {
       content: "";
       position: absolute;
@@ -294,7 +362,9 @@
       background-repeat: no-repeat;
 
       @include phones {
-        display: none;
+        left: -40px;
+        height: 26px;
+        width: 26px;
       }
     }
   }

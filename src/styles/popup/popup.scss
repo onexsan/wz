@@ -25,7 +25,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 7px 0;
+      padding: 1.2rem 1.5rem;
       border-right: 5px solid transparent;
       transition: .3s;
       color: white;
@@ -57,12 +57,8 @@
       transition: 0.3s;
     }
 
-    .menu__title {
-      //margin: 15px 0;
-    }
-
     .menu__link {
-      font-size: 15px;
+      font-size: 1.15rem;
       font-weight: 300;
       cursor: pointer;
 
