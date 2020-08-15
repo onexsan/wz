@@ -202,7 +202,11 @@
   }
 
   &__schedule {
-    width: 55%;
+
+    @include phones {
+      width: 55%;
+    }
+
   }
 
 }
