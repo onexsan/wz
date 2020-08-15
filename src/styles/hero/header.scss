@@ -7,6 +7,55 @@
   @include phones {
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    flex: 1;
+  }
+
+  &__left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__decor {
+    display: none;
+
+    @include phones {
+      display: flex;
+      flex-direction: column;
+      width: 70%;
+      position: relative;
+      margin-bottom: 30px;
+
+      .decor__huge {
+        color: #ffffff;
+        font-size: 6.1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-shadow: 0 0 2rem rgba(119, 123, 142, 0.16);
+      }
+
+      .decor__big {
+        text-shadow: 0 0 2rem rgba(119, 123, 142, 0.16);
+        color: #ffffff;
+        font-size: 1.9rem;
+        font-weight: 700;
+        align-self: flex-end;
+      }
+
+      &:after {
+        content: "";
+        background-image: url(./pictures/ball1.png);
+        background-repeat: no-repeat;
+        display: block;
+        width: 6.25rem;
+        height: 6.25rem;
+        position: absolute;
+        top: -10%;
+        right: -10%;
+      }
+    }
   }
 
 
@@ -19,6 +68,7 @@
       width: 100%;
       height: 100%;
     }
+
   }
 
   &__right {
@@ -176,4 +226,20 @@
       }
     }
   }
+}
+
+.header {
+
+  &__mobile {
+    display: none;
+
+    @include phones {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      z-index: 10;
+    }
+  }
+
 }

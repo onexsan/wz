@@ -8,15 +8,44 @@
 
   @include phones {
     background-image: none;
-    background-color: $colorLightBlue;
+    background-color: #f6f9fb;
+    position: relative;
+
+    &:after {
+      content: "";
+      width: 18.75rem;
+      height: 21.875rem;
+      display: block;
+      border-radius: 6.25rem;
+      transform: rotate(45deg);
+      background-color: #eaf0f4;
+      position: absolute;
+      top: -17.1875rem;
+      left: -0.625rem;
+    }
+
   }
 
   &__container {
     justify-content: space-between;
     max-width: $maxWidth;
+    position: relative;
 
     @include phones {
       justify-content: center;
+
+      &:before {
+        content: "";
+        width: 18.75rem;
+        height: 21.875rem;
+        display: block;
+        border-radius: 3.75rem;
+        transform: rotate(45deg);
+        background-color: #eaf0f4;
+        position: absolute;
+        bottom: 1.5625rem;
+        right: -10.9375rem;
+      }
     }
   }
 
@@ -28,6 +57,24 @@
     @include phones {
       width: 100%;
       text-align: center;
+      justify-content: space-between;
+      align-items: center;
+      flex: 1;
+      position: relative;
+
+      &:after {
+        content: "";
+        background-image: url(./pictures/ball2.png);
+        background-repeat: no-repeat;
+        display: block;
+        width: 5rem;
+        height: 5rem;
+        position: absolute;
+        bottom: 40%;
+        left: 0%;
+      }
+
+
     }
   }
 
@@ -47,6 +94,9 @@
         font-weight: 700;
         text-transform: uppercase;
         text-align: center;
+        max-width: 70%;
+        margin-bottom: 30px;
+
 
       }
     }
