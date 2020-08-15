@@ -20,6 +20,12 @@
       padding-top: 70px;
     }
 
+    .menu__link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
     .menu__item {
       display: flex;
       flex-direction: column;
