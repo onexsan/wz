@@ -1,5 +1,4 @@
 .sidebar-menu {
-  width: 20rem;
   position: fixed;
   z-index: 1;
   top: 5px;
@@ -18,11 +17,13 @@
 
     &--first {
       margin-bottom: 30px;
+      width: 20rem;
+
+      @media screen and (max-width: 1800px) {
+        margin-bottom: 10px;
+      }
     }
 
-    &--second {
-      box-shadow: -1px 25px 36px -20px rgba(0, 0, 0, 0.25);
-    }
   }
 
   &__item {
@@ -56,34 +57,60 @@
     position: absolute;
     top: 0;
     left: 20%;
+
+    @media screen and (max-width: 1800px) {
+      padding: 6px;
+      font-size: 18px;
+      left: 18%;
+    }
   }
 
   &__icon {
     width: 55px;
+
+    @media screen and (max-width: 1800px) {
+      width: 3rem;
+    }
   }
 
+
+}
+
+
+.sidebar-menu {
   &__row {
-    background-color: $colorRed;
+    display: flex;
+    flex-direction: column;
+    width: 18rem;
+
+    @media screen and (max-width: 1800px) {
+      width: 3rem;
+    }
+  }
+
+  &__head {
     display: flex;
     align-items: center;
+    background-color: $colorRed;
+    width: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
     padding: 20px;
-    border-bottom: 1px solid rgba($color: #000000, $alpha: 0.3);
+    cursor: pointer;
+    position: relative;
 
-    &:first-child {
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
+    @media screen and (max-width: 1800px) {
+      padding: 5px 5px;
     }
+  }
 
-    &:last-child {
-      border-bottom: none;
-      border-bottom-left-radius: 10px;
-      border-bottom-right-radius: 10px;
-    }
-
-    &--insides {
-      background-color: $colorLightBlue;
-      display: none;
-    }
+  &__list {
+    padding: 10px;
+    background-color: $colorLightBlue;
+    width: 100%;
+    padding-left: 20px;
+    display: none;
+    border-bottom-right-radius: 10px;
   }
 
   &__desc {
@@ -91,14 +118,67 @@
     font-weight: bold;
     color: white;
     text-transform: uppercase;
+
+    @media screen and (max-width: 1800px) {
+      font-size: 0.8rem;
+      display: none;
+    }
+
   }
 
   &__img {
     margin-right: 30px;
+
+    @media screen and (max-width: 1800px) {
+      margin-left: 5px;
+      margin-right: 10px;
+
+    }
   }
 
   &__link {
     font-size: 15.1px;
     color: $colorDustyBlue;
+
+    &:hover {
+      color: $colorRed;
+    }
+
+    @media screen and (max-width: 1800px) {
+      font-size: 12px;
+    }
+
   }
+}
+
+ul#sections-nav>li:first-child>.sidebar-menu__head {
+  border-top-left-radius: 10px;
+}
+
+ul#sections-nav>li:last-child>.sidebar-menu__head {
+  border-bottom-left-radius: 10px;
+}
+
+ul#sections-nav>li:last-child:hover>.sidebar-menu__head {
+  border-bottom-left-radius: 0px;
+}
+
+ul#sections-nav>li:last-child:hover>.sidebar-menu__list {
+  border-bottom-left-radius: 10px;
+}
+
+ul#sections-nav>li:hover {
+  width: 18rem;
+
+  .sidebar-menu__head {
+    border-bottom-right-radius: 0px;
+  }
+
+  .sidebar-menu__desc {
+    display: block;
+  }
+}
+
+ul#sections-nav>li:hover>ul.sidebar-menu__list {
+  display: block;
 }
